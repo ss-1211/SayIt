@@ -12,6 +12,10 @@
 		E31F77CD231280210095CB8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E31F77CB231280210095CB8E /* Main.storyboard */; };
 		E31F77CF231280260095CB8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E31F77CE231280260095CB8E /* Assets.xcassets */; };
 		E31F77D2231280260095CB8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E31F77D0231280260095CB8E /* LaunchScreen.storyboard */; };
+		E31F77DB231281770095CB8E /* UserPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F77D9231281770095CB8E /* UserPostCell.swift */; };
+		E31F77DC231281770095CB8E /* UserPostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31F77DA231281770095CB8E /* UserPostCell.xib */; };
+		E31F77DE231286100095CB8E /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F77DD231286100095CB8E /* FeedData.swift */; };
+		E3F316412312A752005BCC17 /* UserBalloonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F316402312A752005BCC17 /* UserBalloonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		E31F77CE231280260095CB8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E31F77D1231280260095CB8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E31F77D3231280260095CB8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E31F77D9231281770095CB8E /* UserPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostCell.swift; sourceTree = "<group>"; };
+		E31F77DA231281770095CB8E /* UserPostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserPostCell.xib; sourceTree = "<group>"; };
+		E31F77DD231286100095CB8E /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
+		E3F316402312A752005BCC17 /* UserBalloonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBalloonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,10 @@
 			children = (
 				E31F77C7231280210095CB8E /* AppDelegate.swift */,
 				E31F77C9231280210095CB8E /* ViewController.swift */,
+				E31F77DD231286100095CB8E /* FeedData.swift */,
+				E31F77D9231281770095CB8E /* UserPostCell.swift */,
+				E3F316402312A752005BCC17 /* UserBalloonView.swift */,
+				E31F77DA231281770095CB8E /* UserPostCell.xib */,
 				E31F77CB231280210095CB8E /* Main.storyboard */,
 				E31F77CE231280260095CB8E /* Assets.xcassets */,
 				E31F77D0231280260095CB8E /* LaunchScreen.storyboard */,
@@ -124,6 +136,7 @@
 			files = (
 				E31F77D2231280260095CB8E /* LaunchScreen.storyboard in Resources */,
 				E31F77CF231280260095CB8E /* Assets.xcassets in Resources */,
+				E31F77DC231281770095CB8E /* UserPostCell.xib in Resources */,
 				E31F77CD231280210095CB8E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E31F77DB231281770095CB8E /* UserPostCell.swift in Sources */,
 				E31F77CA231280210095CB8E /* ViewController.swift in Sources */,
 				E31F77C8231280210095CB8E /* AppDelegate.swift in Sources */,
+				E3F316412312A752005BCC17 /* UserBalloonView.swift in Sources */,
+				E31F77DE231286100095CB8E /* FeedData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +308,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.shun.sasaki.SayIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,7 +326,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.shun.sasaki.SayIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
