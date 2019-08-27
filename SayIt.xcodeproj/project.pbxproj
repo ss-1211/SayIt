@@ -16,6 +16,9 @@
 		E31F77DC231281770095CB8E /* UserPostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31F77DA231281770095CB8E /* UserPostCell.xib */; };
 		E31F77DE231286100095CB8E /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F77DD231286100095CB8E /* FeedData.swift */; };
 		E37B4E9B23141C71003F4E5C /* AdminBalloonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37B4E9A23141C71003F4E5C /* AdminBalloonView.swift */; };
+		E37B4EA12314EC7C003F4E5C /* UserCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37B4EA02314EC7C003F4E5C /* UserCommentViewController.swift */; };
+		E37B4EA42314F5A7003F4E5C /* UserCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37B4EA22314F5A7003F4E5C /* UserCommentTableViewCell.swift */; };
+		E37B4EA52314F5A7003F4E5C /* UserCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E37B4EA32314F5A7003F4E5C /* UserCommentTableViewCell.xib */; };
 		E3F316412312A752005BCC17 /* UserBalloonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F316402312A752005BCC17 /* UserBalloonView.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +34,9 @@
 		E31F77DA231281770095CB8E /* UserPostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserPostCell.xib; sourceTree = "<group>"; };
 		E31F77DD231286100095CB8E /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
 		E37B4E9A23141C71003F4E5C /* AdminBalloonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminBalloonView.swift; sourceTree = "<group>"; };
+		E37B4EA02314EC7C003F4E5C /* UserCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCommentViewController.swift; sourceTree = "<group>"; };
+		E37B4EA22314F5A7003F4E5C /* UserCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCommentTableViewCell.swift; sourceTree = "<group>"; };
+		E37B4EA32314F5A7003F4E5C /* UserCommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCommentTableViewCell.xib; sourceTree = "<group>"; };
 		E3F316402312A752005BCC17 /* UserBalloonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBalloonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +76,9 @@
 				E31F77D9231281770095CB8E /* UserPostCell.swift */,
 				E3F316402312A752005BCC17 /* UserBalloonView.swift */,
 				E37B4E9A23141C71003F4E5C /* AdminBalloonView.swift */,
+				E37B4EA02314EC7C003F4E5C /* UserCommentViewController.swift */,
+				E37B4EA22314F5A7003F4E5C /* UserCommentTableViewCell.swift */,
+				E37B4EA32314F5A7003F4E5C /* UserCommentTableViewCell.xib */,
 				E31F77DA231281770095CB8E /* UserPostCell.xib */,
 				E31F77CB231280210095CB8E /* Main.storyboard */,
 				E31F77CE231280260095CB8E /* Assets.xcassets */,
@@ -138,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E31F77D2231280260095CB8E /* LaunchScreen.storyboard in Resources */,
+				E37B4EA52314F5A7003F4E5C /* UserCommentTableViewCell.xib in Resources */,
 				E31F77CF231280260095CB8E /* Assets.xcassets in Resources */,
 				E31F77DC231281770095CB8E /* UserPostCell.xib in Resources */,
 				E31F77CD231280210095CB8E /* Main.storyboard in Resources */,
@@ -156,6 +166,8 @@
 				E31F77CA231280210095CB8E /* ViewController.swift in Sources */,
 				E31F77C8231280210095CB8E /* AppDelegate.swift in Sources */,
 				E3F316412312A752005BCC17 /* UserBalloonView.swift in Sources */,
+				E37B4EA12314EC7C003F4E5C /* UserCommentViewController.swift in Sources */,
+				E37B4EA42314F5A7003F4E5C /* UserCommentTableViewCell.swift in Sources */,
 				E31F77DE231286100095CB8E /* FeedData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

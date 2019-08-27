@@ -8,6 +8,7 @@
 
 import UIKit
 
+//ユーザー投稿データ
 class UserPost: NSObject{
     let id: String
     let userIcon: UIImage
@@ -15,6 +16,7 @@ class UserPost: NSObject{
     let userPostContent: String
     let adminIcon: UIImage
     let adminPostContent: String?
+    let type: String
     let adminExist: AdminExist
     
     public init(id:String, userIcon: UIImage, userName: String, userPostContent: String, adminIcon: UIImage, adminPostContent: String?, adminExist: AdminExist){
@@ -25,9 +27,27 @@ class UserPost: NSObject{
         self.adminIcon = adminIcon
         self.adminPostContent = adminPostContent
         self.adminExist = adminExist
+        self.type = "Post"
     }
     public func isAdminExist() -> Bool {
         return adminExist == .Y
+    }
+}
+
+//コメントデータ
+class CommentPost: NSObject{
+    let id: String
+    let userIcon: UIImage
+    let userName : String
+    let comment: String
+    let type: String
+    
+    public init(id:String, userIcon: UIImage, userName: String, comment: String){
+        self.id = id
+        self.userIcon = userIcon
+        self.userName = userName
+        self.comment = comment
+        self.type = "Comment"
     }
 }
 
@@ -51,3 +71,4 @@ public enum AdminExist {
     case Y
     case N
 }
+
