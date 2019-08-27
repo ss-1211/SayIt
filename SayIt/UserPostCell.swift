@@ -21,10 +21,16 @@ class UserPostCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         userIcon.layer.cornerRadius = 15
-        userPost.layer.cornerRadius = 30
+        userPost.layer.cornerRadius = 10
+        userPost.backgroundColor = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
         adminPost.layer.cornerRadius = 15
-        self.addSubview(UserBalloonView(frame: CGRect(x: userPost.frame.minX, y: userPost.frame.minY, width: 50, height: 50)))//吹き出しのようにするためにビューを重ねる
-
+        adminPost.backgroundColor = UIColor(red: 242/255, green: 237/255, blue: 115/255, alpha: 1)
+        self.addSubview(UserBalloonView(frame: CGRect(x: userPost.frame.minX+10, y: userPost.frame.minY-18, width: 40, height: 30)))//吹き出しのようにするためにビューを重ねる
+        self.addSubview(AdminBalloonView(frame: CGRect(x: adminPost.frame.maxX, y: userPost.frame.minY+60, width: 30, height: 30)))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.tappped(_:)))
+        userPost.addGestureRecognizer(tapGesture)
+        userPost.isUserInteractionEnabled = true
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -39,7 +45,7 @@ class UserPostCell: UITableViewCell {
         self.userName.text = userName
         self.userPost.text = userPost
         self.adminIcon.image = UIImage(named: "crazy")
-        self.adminPost.backgroundColor = .clear
+//        self.adminPost.backgroundColor = .clear
         self.adminPost.text = ""
     }
     func setUpWithComment(userIcon: UIImage, userName: String, userPost: String, adminPost: String!){
@@ -49,4 +55,26 @@ class UserPostCell: UITableViewCell {
         self.adminIcon.image = UIImage(named: "crazy")
         self.adminPost.text = adminPost
     }
+    @objc func tappped(_ sender: UITapGestureRecognizer) {
+        let blurEffect = UIBlurEffect(style: .extraLight)
+        // ブラーエフェクトからエフェクトビューを作成
+        let visualEffectView = UIVisualEffectView(effect: blurEffect)
+        // エフェクトビューのサイズを画面に合わせる
+        visualEffectView.frame = self.frame
+        // エフェクトビューを初期viewに追加
+        self.addSubview(visualEffectView)
+        let goodIcon = UIImage(named: "good3")
+        let goodButton = UIButton(type: .system)
+        goodButton.setBackgroundImage(goodIcon, for: .normal)
+        goodButton.frame = CGRect(x: userPost.frame.minX+100, y: userPost.frame.maxY-50, width: 50, height: 50)
+        self.addSubview(goodButton)
+        
+        let badIcon = UIImage(named: "good3")
+        let badButton = UIButton(type: .system)
+        badButton.setBackgroundImage(badIcon, for: .normal)
+        badButton.frame = CGRect(x: userPost.frame.minX+140, y: userPost.frame.maxY-80, width: 50, height: 50)
+        self.addSubview(badButton)
+        
+    }
+    
 }

@@ -21,6 +21,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         postTableView.dataSource = self
         //ユーザーの投稿内容セル
         postTableView.register(UINib(nibName: "UserPostCell", bundle: nil), forCellReuseIdentifier: "UserPost")
+        self.postTableView.allowsSelection = false
         
         //ユーザーフィードのテストフィード生成
         let userPost1 = UserPost(id: "1", userIcon: UIImage(named: "userIcon")!, userName: "Shun", userPostContent: "今日のご飯はお好み焼きやねん。",adminIcon: UIImage(named: "crazy")!, adminPostContent: "", adminExist: .N )
@@ -38,6 +39,12 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let userFeed = userFeeds[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserPost") as! UserPostCell
+        //ユーザーポスト用のタップジェスチャー設定
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.tappped(_:)))
+//        cell.userPost.addGestureRecognizer(tapGesture)
+//        cell.userPost.isUserInteractionEnabled = true
+
+        
         if userFeed.isAdminExist() {
             cell.setUpWithComment(userIcon: userFeed.userIcon, userName: userFeed.userName, userPost: userFeed.userPostContent, adminPost: userFeed.adminPostContent)
             return cell
@@ -46,7 +53,33 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             return cell
         }
     }
-
-
+    
+    //ユーザポストタップ時の処理
+    @objc func tappped(_ sender: UITapGestureRecognizer) {
+        let cell = postTableView.dequeueReusableCell(withIdentifier: "UserPost") as! UserPostCell
+        let tappedLocation = sender.location(in: postTableView)
+        let tappedIndexPath = postTableView.indexPathForRow(at: tappedLocation)
+        let tappedRow = tappedIndexPath?.row
+//        print(tappedRow)
+//        let blurEffect = UIBlurEffect(style: .extraLight)
+//        // ブラーエフェクトからエフェクトビューを作成
+//        let visualEffectView = UIVisualEffectView(effect: blurEffect)
+//        // エフェクトビューのサイズを画面に合わせる
+//        visualEffectView.frame = self.view.frame
+//        // エフェクトビューを初期viewに追加
+//        self.view.addSubview(visualEffectView)
+        let goodIcon = UIImage(named: "good3")
+        let goodButton = UIButton(type: .system)
+        goodButton.setBackgroundImage(goodIcon, for: .normal)
+        goodButton.frame = CGRect(x: cell.userPost.frame.minX+100, y: cell.userPost.frame.maxY, width: 50, height: 50)
+        self.view.addSubview(goodButton)
+        
+        let badIcon = UIImage(named: "good3")
+        let badButton = UIButton(type: .system)
+        badButton.setBackgroundImage(badIcon, for: .normal)
+        badButton.frame = CGRect(x: cell.userPost.frame.minX+140, y: cell.userPost.frame.maxY+30, width: 50, height: 50)
+        self.view.addSubview(badButton)
+        
+    }
 }
 

@@ -15,6 +15,7 @@
 		E31F77DB231281770095CB8E /* UserPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F77D9231281770095CB8E /* UserPostCell.swift */; };
 		E31F77DC231281770095CB8E /* UserPostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31F77DA231281770095CB8E /* UserPostCell.xib */; };
 		E31F77DE231286100095CB8E /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F77DD231286100095CB8E /* FeedData.swift */; };
+		E37B4E9B23141C71003F4E5C /* AdminBalloonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37B4E9A23141C71003F4E5C /* AdminBalloonView.swift */; };
 		E3F316412312A752005BCC17 /* UserBalloonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F316402312A752005BCC17 /* UserBalloonView.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		E31F77D9231281770095CB8E /* UserPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostCell.swift; sourceTree = "<group>"; };
 		E31F77DA231281770095CB8E /* UserPostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserPostCell.xib; sourceTree = "<group>"; };
 		E31F77DD231286100095CB8E /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
+		E37B4E9A23141C71003F4E5C /* AdminBalloonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminBalloonView.swift; sourceTree = "<group>"; };
 		E3F316402312A752005BCC17 /* UserBalloonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBalloonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +69,7 @@
 				E31F77DD231286100095CB8E /* FeedData.swift */,
 				E31F77D9231281770095CB8E /* UserPostCell.swift */,
 				E3F316402312A752005BCC17 /* UserBalloonView.swift */,
+				E37B4E9A23141C71003F4E5C /* AdminBalloonView.swift */,
 				E31F77DA231281770095CB8E /* UserPostCell.xib */,
 				E31F77CB231280210095CB8E /* Main.storyboard */,
 				E31F77CE231280260095CB8E /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37B4E9B23141C71003F4E5C /* AdminBalloonView.swift in Sources */,
 				E31F77DB231281770095CB8E /* UserPostCell.swift in Sources */,
 				E31F77CA231280210095CB8E /* ViewController.swift in Sources */,
 				E31F77C8231280210095CB8E /* AppDelegate.swift in Sources */,
