@@ -8,6 +8,12 @@
 
 import UIKit
 
+//ユーザー投稿データ+コメントデータ
+class TableData: NSObject{
+    var userPost: UserPost?
+    var commentPost: CommentPost?
+}
+
 //ユーザー投稿データ
 class UserPost: NSObject{
     let id: String

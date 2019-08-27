@@ -13,8 +13,9 @@ class UserCommentViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet weak var userCommentTable: UITableView!
     
+    var tableData:[TableData] = []
     var commentFeeds: [CommentPost] = []
-    var userFeeds = [UserPost]()
+    var userFeeds:[UserPost] = []
     
     
     override func viewDidLoad() {
@@ -30,42 +31,34 @@ class UserCommentViewController: UIViewController, UITableViewDelegate, UITableV
         let comment1 = CommentPost(id: "1", userIcon:UIImage(named: "userIcon")!, userName: "Test", comment: "面白いね。")
         let comment2 = CommentPost(id: "1", userIcon:UIImage(named: "userIcon")!, userName: "Test", comment: "面白いね。")
         commentFeeds = [comment1,comment2]
+        tableData = [userFeeds, commentFeeds] as! [TableData]
+        
         // Do any additional setup after loading the view.
     }
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return commentFeeds.count + userFeeds.count
+        return tableData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let userFeed = userFeeds[indexPath.row]
-        let commentFeed = commentFeeds[indexPath.row]
+        let data = tableData[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserPost") as! UserPostCell
         let commentCell = tableView.dequeueReusableCell(withIdentifier: "Comment") as! UserCommentTableViewCell
-        if userFeed.type == "Post" {
-            if userFeed.isAdminExist() {
-                cell.setUpWithComment(userIcon: userFeed.userIcon, userName: userFeed.userName, userPost: userFeed.userPostContent, adminPost: userFeed.adminPostContent)
+        
+        if data.commentPost == nil {
+            if data.userPost!.isAdminExist() {
+                cell.setUpWithComment(userIcon: data.userPost!.userIcon, userName: data.userPost!.userName, userPost: data.userPost!.userPostContent, adminPost: data.userPost?.adminPostContent)
                 return cell
             }else{
-                cell.setUp(userIcon: userFeed.userIcon, userName: userFeed.userName, userPost: userFeed.userPostContent, adminPost: userFeed.adminPostContent)
+                cell.setUp(userIcon: data.userPost!.userIcon, userName: data.userPost!.userName, userPost: data.userPost!.userPostContent, adminPost: data.userPost?.adminPostContent)
                 return cell
             }
         }else{
-            commentCell.userName.text = commentFeed.userName
-            commentCell.userIcon.image = commentFeed.userIcon
-            commentCell.comment.text = commentFeed.comment
+            commentCell.userName.text = data.commentPost!.userName
+            commentCell.userIcon.image = data.commentPost!.userIcon
+            commentCell.comment.text = data.commentPost!.comment
             return commentCell
             }
         }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
