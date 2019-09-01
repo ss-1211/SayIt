@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+    @IBAction func baButton(_ sender: UIBarButtonItem) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SuperHome") as! UITestViewController
+        self.present(vc, animated: true, completion: nil)
+    }
     
     var userFeeds: [UserPost] = []
 
@@ -24,12 +28,10 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
 //        self.postTableView.allowsSelection = false
         
         //ユーザーフィードのテストフィード生成
-        let userPost1 = UserPost(id: "1", userIcon: UIImage(named: "userIcon")!, userName: "Shun", userPostContent: "今日のご飯はお好み焼きやねん。",adminIcon: UIImage(named: "crazy")!, adminPostContent: "", adminExist: .N)
-        let userPost2 = UserPost(id: "2", userIcon: UIImage(named: "userIcon")!, userName: "Shun", userPostContent: "吹田ってめっちゃ最高やなぁ", adminIcon: UIImage(named: "crazy")!, adminPostContent: "それな", adminExist: .Y)
-        let userPost3 = UserPost(id: "3", userIcon: UIImage(named: "userIcon")!, userName: "TY", userPostContent: "なんばの街並みがどんどん変わってきて、少し寂しい気がするねんけど、どう思う？",adminIcon: UIImage(named: "crazy")!, adminPostContent: "", adminExist: .N)
+        let userPost1 = UserPost(id: "1", userIcon: UIImage(named: "userIcon")!, userName: "Shun", userPostContent: "今日のご飯はお好み焼きやねん。", userPostImage:nil,adminIcon: UIImage(named: "crazy")!, adminPostContent: "", adminExist: .N)
+        let userPost2 = UserPost(id: "2", userIcon: UIImage(named: "userIcon")!, userName: "Shun", userPostContent: "吹田ってめっちゃ最高やなぁ", userPostImage:UIImage(named: "osakakoku_logo"), adminIcon: UIImage(named: "crazy")!, adminPostContent: "それな", adminExist: .Y)
+        let userPost3 = UserPost(id: "3", userIcon: UIImage(named: "userIcon")!, userName: "TY", userPostContent: "なんばの街並みがどんどん変わってきて、少し寂しい気がするねんけど、どう思う？", userPostImage: nil,adminIcon: UIImage(named: "crazy")!, adminPostContent: "", adminExist: .N)
         userFeeds = [userPost1, userPost2, userPost3]
-        
-        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -46,14 +48,23 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let userFeed = userFeeds[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserPost") as! UserPostCell
-        
-        if userFeed.isAdminExist() {
-            cell.setUpWithComment(userIcon: userFeed.userIcon, userName: userFeed.userName, userPost: userFeed.userPostContent, adminPost: userFeed.adminPostContent)
+        cell.setUp(userIcon: userFeed.userIcon, userName: userFeed.userName, userPost: userFeed.userPostContent,userPostImage: userFeed.userPostImage, adminPost: userFeed.adminPostContent)
             return cell
-        }else{
-            cell.setUp(userIcon: userFeed.userIcon, userName: userFeed.userName, userPost: userFeed.userPostContent, adminPost: userFeed.adminPostContent)
-            return cell
-        }
     }
+    //セルをスワイプした時のアクションを設定
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let favoriteAction = UIContextualAction(style: .normal,
+                                                title: "なんでやねん",
+                                                handler: { (action: UIContextualAction, view: UIView, completion: (Bool) -> Void) in
+                                                    print("Favorite")
+                                                    // 処理を実行完了した場合はtrue
+                                                    completion(true)
+        })
+        favoriteAction.backgroundColor = UIColor.black
+        favoriteAction.image = UIImage(named: "good3")
+        
+        return UISwipeActionsConfiguration(actions: [favoriteAction])
+    }
+    
 }
 

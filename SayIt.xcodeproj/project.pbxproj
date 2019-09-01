@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8946A8322138C5FC24E6DEC9 /* Pods_SayIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF920E5687A2498C24D84536 /* Pods_SayIt.framework */; };
 		E31F77C8231280210095CB8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F77C7231280210095CB8E /* AppDelegate.swift */; };
 		E31F77CA231280210095CB8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F77C9231280210095CB8E /* ViewController.swift */; };
 		E31F77CD231280210095CB8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E31F77CB231280210095CB8E /* Main.storyboard */; };
@@ -15,14 +16,25 @@
 		E31F77DB231281770095CB8E /* UserPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F77D9231281770095CB8E /* UserPostCell.swift */; };
 		E31F77DC231281770095CB8E /* UserPostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31F77DA231281770095CB8E /* UserPostCell.xib */; };
 		E31F77DE231286100095CB8E /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31F77DD231286100095CB8E /* FeedData.swift */; };
+		E34A8DF52316B1610002FA3D /* ProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34A8DF42316B1610002FA3D /* ProfileSettingViewController.swift */; };
+		E360C42B231611BE00F5EFBB /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E360C429231611BE00F5EFBB /* ProfileCell.swift */; };
+		E360C42C231611BE00F5EFBB /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E360C42A231611BE00F5EFBB /* ProfileCell.xib */; };
+		E367BA6F2316737F003F4C26 /* UITestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E367BA6E2316737F003F4C26 /* UITestViewController.swift */; };
+		E367BA722316817B003F4C26 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E367BA712316817B003F4C26 /* UserModel.swift */; };
+		E36A420F231B941F0002F885 /* DWYL_neon2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E36A420E231B941F0002F885 /* DWYL_neon2.jpeg */; };
 		E37B4E9B23141C71003F4E5C /* AdminBalloonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37B4E9A23141C71003F4E5C /* AdminBalloonView.swift */; };
 		E37B4EA12314EC7C003F4E5C /* UserCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37B4EA02314EC7C003F4E5C /* UserCommentViewController.swift */; };
 		E37B4EA42314F5A7003F4E5C /* UserCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37B4EA22314F5A7003F4E5C /* UserCommentTableViewCell.swift */; };
 		E37B4EA52314F5A7003F4E5C /* UserCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E37B4EA32314F5A7003F4E5C /* UserCommentTableViewCell.xib */; };
+		E3941DC32317FC0A00EC0AF3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3941DC22317FC0A00EC0AF3 /* LoginViewController.swift */; };
+		E3C7467323155E8D0039D5B3 /* CommentBalloonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C7467223155E8D0039D5B3 /* CommentBalloonView.swift */; };
 		E3F316412312A752005BCC17 /* UserBalloonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F316402312A752005BCC17 /* UserBalloonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		76F192C553E462034E41903C /* Pods-SayIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SayIt.debug.xcconfig"; path = "Target Support Files/Pods-SayIt/Pods-SayIt.debug.xcconfig"; sourceTree = "<group>"; };
+		8C0877F7AEA676D5F8C63385 /* Pods-SayIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SayIt.release.xcconfig"; path = "Target Support Files/Pods-SayIt/Pods-SayIt.release.xcconfig"; sourceTree = "<group>"; };
+		BF920E5687A2498C24D84536 /* Pods_SayIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SayIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E31F77C4231280210095CB8E /* SayIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SayIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E31F77C7231280210095CB8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E31F77C9231280210095CB8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,10 +45,18 @@
 		E31F77D9231281770095CB8E /* UserPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostCell.swift; sourceTree = "<group>"; };
 		E31F77DA231281770095CB8E /* UserPostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserPostCell.xib; sourceTree = "<group>"; };
 		E31F77DD231286100095CB8E /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
+		E34A8DF42316B1610002FA3D /* ProfileSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingViewController.swift; sourceTree = "<group>"; };
+		E360C429231611BE00F5EFBB /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		E360C42A231611BE00F5EFBB /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
+		E367BA6E2316737F003F4C26 /* UITestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestViewController.swift; sourceTree = "<group>"; };
+		E367BA712316817B003F4C26 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		E36A420E231B941F0002F885 /* DWYL_neon2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DWYL_neon2.jpeg; sourceTree = "<group>"; };
 		E37B4E9A23141C71003F4E5C /* AdminBalloonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminBalloonView.swift; sourceTree = "<group>"; };
 		E37B4EA02314EC7C003F4E5C /* UserCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCommentViewController.swift; sourceTree = "<group>"; };
 		E37B4EA22314F5A7003F4E5C /* UserCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCommentTableViewCell.swift; sourceTree = "<group>"; };
 		E37B4EA32314F5A7003F4E5C /* UserCommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCommentTableViewCell.xib; sourceTree = "<group>"; };
+		E3941DC22317FC0A00EC0AF3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E3C7467223155E8D0039D5B3 /* CommentBalloonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentBalloonView.swift; sourceTree = "<group>"; };
 		E3F316402312A752005BCC17 /* UserBalloonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBalloonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,17 +65,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8946A8322138C5FC24E6DEC9 /* Pods_SayIt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57BE8EC624A9784E75180819 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76F192C553E462034E41903C /* Pods-SayIt.debug.xcconfig */,
+				8C0877F7AEA676D5F8C63385 /* Pods-SayIt.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6F025D650727C3BDFE6A5A40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF920E5687A2498C24D84536 /* Pods_SayIt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E31F77BB231280210095CB8E = {
 			isa = PBXGroup;
 			children = (
 				E31F77C6231280210095CB8E /* SayIt */,
 				E31F77C5231280210095CB8E /* Products */,
+				57BE8EC624A9784E75180819 /* Pods */,
+				6F025D650727C3BDFE6A5A40 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,22 +110,46 @@
 		E31F77C6231280210095CB8E /* SayIt */ = {
 			isa = PBXGroup;
 			children = (
+				E367BA7023167432003F4C26 /* UITest */,
+				E360C42D23162AFE00F5EFBB /* Model */,
 				E31F77C7231280210095CB8E /* AppDelegate.swift */,
 				E31F77C9231280210095CB8E /* ViewController.swift */,
-				E31F77DD231286100095CB8E /* FeedData.swift */,
-				E31F77D9231281770095CB8E /* UserPostCell.swift */,
+				E360C429231611BE00F5EFBB /* ProfileCell.swift */,
+				E360C42A231611BE00F5EFBB /* ProfileCell.xib */,
 				E3F316402312A752005BCC17 /* UserBalloonView.swift */,
+				E3C7467223155E8D0039D5B3 /* CommentBalloonView.swift */,
+				E34A8DF42316B1610002FA3D /* ProfileSettingViewController.swift */,
 				E37B4E9A23141C71003F4E5C /* AdminBalloonView.swift */,
 				E37B4EA02314EC7C003F4E5C /* UserCommentViewController.swift */,
 				E37B4EA22314F5A7003F4E5C /* UserCommentTableViewCell.swift */,
 				E37B4EA32314F5A7003F4E5C /* UserCommentTableViewCell.xib */,
+				E31F77D9231281770095CB8E /* UserPostCell.swift */,
 				E31F77DA231281770095CB8E /* UserPostCell.xib */,
 				E31F77CB231280210095CB8E /* Main.storyboard */,
+				E3941DC22317FC0A00EC0AF3 /* LoginViewController.swift */,
 				E31F77CE231280260095CB8E /* Assets.xcassets */,
+				E36A420E231B941F0002F885 /* DWYL_neon2.jpeg */,
 				E31F77D0231280260095CB8E /* LaunchScreen.storyboard */,
 				E31F77D3231280260095CB8E /* Info.plist */,
 			);
 			path = SayIt;
+			sourceTree = "<group>";
+		};
+		E360C42D23162AFE00F5EFBB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E31F77DD231286100095CB8E /* FeedData.swift */,
+				E367BA712316817B003F4C26 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E367BA7023167432003F4C26 /* UITest */ = {
+			isa = PBXGroup;
+			children = (
+				E367BA6E2316737F003F4C26 /* UITestViewController.swift */,
+			);
+			path = UITest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E31F77D6231280260095CB8E /* Build configuration list for PBXNativeTarget "SayIt" */;
 			buildPhases = (
+				CE2B445B2CBE253A192CC01C /* [CP] Check Pods Manifest.lock */,
 				E31F77C0231280210095CB8E /* Sources */,
 				E31F77C1231280210095CB8E /* Frameworks */,
 				E31F77C2231280210095CB8E /* Resources */,
+				24A104244521B114CB5371CA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +215,8 @@
 				E31F77D2231280260095CB8E /* LaunchScreen.storyboard in Resources */,
 				E37B4EA52314F5A7003F4E5C /* UserCommentTableViewCell.xib in Resources */,
 				E31F77CF231280260095CB8E /* Assets.xcassets in Resources */,
+				E36A420F231B941F0002F885 /* DWYL_neon2.jpeg in Resources */,
+				E360C42C231611BE00F5EFBB /* ProfileCell.xib in Resources */,
 				E31F77DC231281770095CB8E /* UserPostCell.xib in Resources */,
 				E31F77CD231280210095CB8E /* Main.storyboard in Resources */,
 			);
@@ -156,19 +224,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		24A104244521B114CB5371CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SayIt/Pods-SayIt-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SayIt/Pods-SayIt-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SayIt/Pods-SayIt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE2B445B2CBE253A192CC01C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SayIt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E31F77C0231280210095CB8E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3941DC32317FC0A00EC0AF3 /* LoginViewController.swift in Sources */,
+				E367BA6F2316737F003F4C26 /* UITestViewController.swift in Sources */,
 				E37B4E9B23141C71003F4E5C /* AdminBalloonView.swift in Sources */,
 				E31F77DB231281770095CB8E /* UserPostCell.swift in Sources */,
 				E31F77CA231280210095CB8E /* ViewController.swift in Sources */,
 				E31F77C8231280210095CB8E /* AppDelegate.swift in Sources */,
 				E3F316412312A752005BCC17 /* UserBalloonView.swift in Sources */,
+				E34A8DF52316B1610002FA3D /* ProfileSettingViewController.swift in Sources */,
 				E37B4EA12314EC7C003F4E5C /* UserCommentViewController.swift in Sources */,
 				E37B4EA42314F5A7003F4E5C /* UserCommentTableViewCell.swift in Sources */,
 				E31F77DE231286100095CB8E /* FeedData.swift in Sources */,
+				E3C7467323155E8D0039D5B3 /* CommentBalloonView.swift in Sources */,
+				E367BA722316817B003F4C26 /* UserModel.swift in Sources */,
+				E360C42B231611BE00F5EFBB /* ProfileCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +428,7 @@
 		};
 		E31F77D7231280260095CB8E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76F192C553E462034E41903C /* Pods-SayIt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -330,6 +447,7 @@
 		};
 		E31F77D8231280260095CB8E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C0877F7AEA676D5F8C63385 /* Pods-SayIt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

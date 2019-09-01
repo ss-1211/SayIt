@@ -20,16 +20,18 @@ class UserPost: NSObject{
     let userIcon: UIImage
     let userName : String
     let userPostContent: String
+    let userPostImage: UIImage?
     let adminIcon: UIImage
     let adminPostContent: String?
     let type: String
     let adminExist: AdminExist
     
-    public init(id:String, userIcon: UIImage, userName: String, userPostContent: String, adminIcon: UIImage, adminPostContent: String?, adminExist: AdminExist){
+    public init(id:String, userIcon: UIImage, userName: String, userPostContent: String, userPostImage: UIImage?, adminIcon: UIImage, adminPostContent: String?, adminExist: AdminExist){
         self.id = id
         self.userIcon = userIcon
         self.userName = userName
         self.userPostContent = userPostContent
+        self.userPostImage = userPostImage
         self.adminIcon = adminIcon
         self.adminPostContent = adminPostContent
         self.adminExist = adminExist

@@ -16,7 +16,10 @@ class UserCommentTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        comment.backgroundColor = UIColor(red: 204/255, green: 204/255, blue: 255/255, alpha: 1)
+        comment.layer.cornerRadius = 7
+        userIcon.layer.cornerRadius = 15
+//        self.addSubview(CommentBalloonView(frame: CGRect(x: comment.frame.maxX, y: comment.frame.minY+60, width: 30, height: 30)))
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
